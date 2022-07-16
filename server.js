@@ -29,6 +29,6 @@ app.get('/logout',function(req, res, next) {
     });
   })
 
-app.listen(8000,()=>{
+app.listen('https://authenticatorbackend.herokuapp.com/',()=>{
     console.log(`post running at : 8000`)
 })
