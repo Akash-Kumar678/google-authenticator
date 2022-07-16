@@ -20,7 +20,7 @@ app.get('/auth/google',passport.authenticate('google',{ scope:['email','profile'
 app.get('/user',loginCheck,(req,res)=>{
         //generate token maintain session
         //redirect to user homepage
-        res.send(`you are logged in : ${req.user.displayName}`)
+        res.send(`you are logged in : ${req.user.displayName}   <a href="/logout">Logout </a> `)
 })
 app.get('/logout',function(req, res, next) {
     req.logout(function(err) {
